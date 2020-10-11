@@ -41,7 +41,7 @@ public class AddEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit);
 
-        //mode 가죠오기
+        mode = getIntent().getIntExtra("item_id", -1);
 
         ActionBar actionbar = getSupportActionBar();
 
@@ -170,7 +170,6 @@ public class AddEditActivity extends AppCompatActivity {
                         }
                     }
                 }
-                return super.onOptionsItemSelected(item);
-        }
+        }return super.onOptionsItemSelected(item);
     }
 }
