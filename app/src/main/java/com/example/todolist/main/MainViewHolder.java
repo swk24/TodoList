@@ -45,7 +45,7 @@ public class MainViewHolder extends RecyclerView.ViewHolder {
 
         Calendar cal = Calendar.getInstance();
         int mYear = cal.get(Calendar.YEAR);
-        int mMonth = cal.get(Calendar.MONTH);
+        int mMonth = cal.get(Calendar.MONTH) + 1;
         int mDay = cal.get(Calendar.DAY_OF_MONTH);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/mm/dd");
@@ -63,7 +63,5 @@ public class MainViewHolder extends RecyclerView.ViewHolder {
             todo_tv_left.setText("0+" + left);
             todo_tv_left.setTextColor(Color.RED);
         }
-
-
     }
 }
