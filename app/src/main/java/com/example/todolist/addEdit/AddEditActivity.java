@@ -157,7 +157,6 @@ public class AddEditActivity extends AppCompatActivity {
                         MyDatabase myDatabase = MyDatabase.getInstance(AddEditActivity.this);
 
                         if (mode == 0) {
-                            //add
                             TodoItem todoItem = new TodoItem(title, sDate, dDate, memo);
                             myDatabase.todoDao().insertTodo(todoItem);
                         } else if (mode == 1) {

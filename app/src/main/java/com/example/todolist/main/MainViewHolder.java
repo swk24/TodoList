@@ -52,7 +52,7 @@ public class MainViewHolder extends RecyclerView.ViewHolder {
 
         Date dDate = simpleDateFormat.parse(item.getDue());
         Date today = simpleDateFormat.parse(mYear + " / " + mMonth + " / " + mDay);
-        Long left = -(dDate.getTime() - today.getTime()) / (24*60*60*1000);
+        Long left = -(dDate.getTime() - today.getTime()) / (24 * 60 * 60 * 1000);
 
         if (left.intValue() < 0) {
             todo_tv_left.setText("D" + left);

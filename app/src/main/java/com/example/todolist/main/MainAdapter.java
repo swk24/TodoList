@@ -76,7 +76,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
                                 intent.putExtra("mode", 1);
                                 intent.putExtra("item_id", temp.getId());
                                 break;
-
                             case "삭제":
                                 itemList.remove(temp);
                                 MyDatabase myDatabase = MyDatabase.getInstance(parent.getContext());
