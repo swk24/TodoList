@@ -23,9 +23,9 @@ public interface TodoDao {
     @Update
     void editTodo(TodoItem item);
 
-    @Query("SELECT + FROM TODO WHERE id = :id")
+    @Query("SELECT * FROM TODO WHERE id = :id")
     TodoItem getTodo(int id);
 
-    @Query("SELECT + FROM TODO")
+    @Query("SELECT * FROM TODO")
     List<TodoItem> getAllTodo();
 }

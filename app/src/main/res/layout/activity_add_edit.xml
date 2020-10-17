@@ -35,8 +35,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -58,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:helperText="Click button to inpur data"
+        app:helperText="Click button to input data"
         app:layout_constraintBottom_toTopOf="@+id/addEdit_tv_due"
         app:layout_constraintEnd_toStartOf="@+id/addEdit_ibtm_start"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:helperText="Click button to inpur data"
+        app:helperText="Click button to input data"
         app:layout_constraintBottom_toTopOf="@+id/addEdit_tv_memo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@id/addEdit_ibtm_due"
