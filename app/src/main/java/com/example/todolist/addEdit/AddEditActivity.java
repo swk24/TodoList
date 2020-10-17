@@ -149,7 +149,7 @@ public class AddEditActivity extends AppCompatActivity {
                     til_dDate.setError("필수요소입니다!");
                 } else til_dDate.setError(null);
 
-                if (title.equals("") && !sDate.equals("") && !dDate.equals("")) {
+                if (title.equals("") && ! sDate.equals("") && !dDate.equals("")) {
                     if (sDate.compareTo(dDate) > 0) {
                         til_sDate.setError("시작 날짜가 더 느려!");
                         til_dDate.setError("끝나는 날짜가 더 빨라요!");

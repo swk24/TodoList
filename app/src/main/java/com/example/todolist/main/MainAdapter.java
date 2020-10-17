@@ -69,8 +69,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
                 final String[] items = {"수정, 삭제, 취소"};
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (items[i]) {
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        switch (items[which]) {
                             case "수정":
                                 Intent intent = new Intent(parent.getContext(), AddEditActivity.class);
                                 intent.putExtra("mode", 1);
