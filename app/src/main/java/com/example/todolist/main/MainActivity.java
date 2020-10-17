@@ -99,4 +99,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.submitAll(myDatabase.todoDao().getAllTodo());
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MyDatabase myDatabase = MyDatabase.getInstance(this);
+        adapter.submitAll(myDatabase.todoDao().getAllTodo());
+    }
 }

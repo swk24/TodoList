@@ -63,9 +63,6 @@ public class AddEditActivity extends AppCompatActivity {
         ib_dDate = findViewById(R.id.addEdit_ibtm_due);
 
         if (mode == 1) {
-            //TODO: edit
-
-            //id 가져오기
             if (id == -1) {
                 Log.d("todo_id", "item id wrong");
                 Toast.makeText(AddEditActivity.this, "item id wrong", Toast.LENGTH_SHORT).show();
@@ -110,6 +107,7 @@ public class AddEditActivity extends AppCompatActivity {
             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
                 String s_month = new Integer(month).toString();
                 String s_date = new Integer(dayOfMonth).toString();
+
                 if (month + 1 < 10) {
                     s_month = "0" + new Integer(month + 1).toString();
                 }
@@ -141,12 +139,16 @@ public class AddEditActivity extends AppCompatActivity {
 
                 if (title.equals("")) {
                     til_title.setError("필수요소입니다!");
-                } else if (sDate.equals("")) {
+                } else til_title.setError(null);
+
+                if (sDate.equals("")) {
                     til_sDate.setError("필수요소입니다!");
                 } else til_sDate.setError(null);
+
                 if (dDate.equals("")) {
                     til_dDate.setError("필수요소입니다!");
                 } else til_dDate.setError(null);
+
                 if (title.equals("") && !sDate.equals("") && !dDate.equals("")) {
                     if (sDate.compareTo(dDate) > 0) {
                         til_sDate.setError("시작 날짜가 더 느려!");
